@@ -1,15 +1,7 @@
-\RequirePackage[]{silence}
-%%% Warning Filter (1) {{{
-\WarningFilter{latexfont}{Font shape}
-\WarningFilter{latexfont}{Some font shapes were not available}
-%%% }}}
 \documentclass[lualatex, ja=standard, a4paper]{bxjsarticle}
 
 \usepackage[]{../math_note}
-\usepackage{booktabs}
-\usepackage{xcolor}
-\usepackage[luatex]{graphicx}
-\usepackage{here}
+\usepackage{booktabs, xcolor, graphicx, here}
 \usepackage{tikz}
 \usetikzlibrary{cd, positioning, arrows}
 \usepackage[luatex, pdfencoding=auto, colorlinks=true, allcolors=black]{hyperref}
@@ -41,15 +33,6 @@ innertopmargin=0pt,
 innerleftmargin=15pt,
 skipabove=\baselineskip,
 bottomline=false,topline=false,rightline=false}
-  
-\surroundwithmdframed[style=GrayVertialBar]{Def}
-\surroundwithmdframed[style=GrayVertialBar]{Def*}
-\surroundwithmdframed[style=GrayVertialBar]{Claim}
-\surroundwithmdframed[style=GrayVertialBar]{Lemma}
-\surroundwithmdframed[style=GrayVertialBar]{Prop}
-\surroundwithmdframed[style=GrayVertialBar]{Thm}
-\surroundwithmdframed[style=GrayVertialBar]{Thm*}
-\surroundwithmdframed[style=GrayVertialBar]{Cor}
 %%% }}}
 
 % {{{ footnoteをmdframedの外側に作る
@@ -63,11 +46,6 @@ bottomline=false,topline=false,rightline=false}
 }
 \makeatother
 % }}}
-
-%%% Warning Filter (2) {{{
-\WarningFilter{mdframed}{You got a bad break}
-\WarningFilter{tablefootnote}{LuaTeX and hyperref package used:}
-%%% }}}
 
 %% category
 \newcommand{\ArtSt}{\cat{ArtSt}}
