@@ -1,10 +1,7 @@
 \documentclass[lualatex, ja=standard, a4paper]{bxjsarticle}
 
-\usepackage[]{../math_note}
-\usepackage{booktabs, xcolor, graphicx, here}
-\usepackage{tikz}
-\usetikzlibrary{cd, positioning, arrows}
-\usepackage[luatex, pdfencoding=auto, colorlinks=true, allcolors=black]{hyperref}
+\usepackage[]{./math_note_sty/math_note}
+\usepackage{graphicx}
 \usepackage[backend=biber, style=alphabetic]{biblatex}
 
 %% appendix {{{
@@ -20,32 +17,6 @@
 {\end{enumerate}}
 %% }}}
 \setenumerate{label=(\roman*),itemsep=3pt,topsep=7pt}
-
-%%% mdframed {{{
-\usepackage[framemethod=tikz]{mdframed}
-
-\mdfdefinestyle{GrayVertialBar}%
-{innerlinecolor=lightgray,
-innerlinewidth=5.0pt,
-outerlinewidth=0pt,
-middlelinewidth=0pt,
-innertopmargin=0pt,
-innerleftmargin=15pt,
-skipabove=\baselineskip,
-bottomline=false,topline=false,rightline=false}
-%%% }}}
-
-% {{{ footnoteをmdframedの外側に作る
-% https://differentialengine.wordpress.com/2018/02/27/latexmdframed-%E7%92%B0%E5%A2%83%E3%81%AE%E5%A4%96%E3%81%AB%E8%84%9A%E6%B3%A8%E3%82%92%E7%BD%AE%E3%81%8F%E6%96%B9%E6%B3%95tablefootnote/
-\usepackage{tablefootnote}
- 
-\makeatletter
-\AfterEndEnvironment{mdframed}{%
-\tfn@tablefootnoteprintout%
-\gdef\tfn@fnt{0}%
-}
-\makeatother
-% }}}
 
 %% category
 \newcommand{\ArtSt}{\cat{ArtSt}}

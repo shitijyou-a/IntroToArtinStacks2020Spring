@@ -1,0 +1,3 @@
+[submodule "math_note_sty"]
+	path = math_note_sty
+	url = git@github.com:shitijyou-a/math_note_sty.git
